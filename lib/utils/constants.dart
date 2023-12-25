@@ -21,6 +21,13 @@ const double tWidthAppBarLogo = 44;
 // Horizontal Menu
 const double tHeightHorizontalMenu = 28;
 
+// Event Card
+const double tHeightEventCard = 96;
+const double tHeightEventCardImage = 48;
+const double tWidthEventCardImage = 48;
+const double tRadiusAvatarEventCard = 24;
+const double tWidthFilledEventCard = 196;
+
 // Font Sizes
 const double tFontSizeSmall = 10;
 const double tFontSizeMedium = 14;
@@ -29,3 +36,20 @@ const double tFontHeight = 1.2;
 
 // Font Family
 const String tTextFontFamilyRegular = 'Inter-Regular';
+
+// Data Path
+const String tPathData = 'assets/data/data.json';
+
+// Null values
+const String tNullIndependentLeague = 'Independent League';
+const String tTextNullTeams = 'No recognized teams';
+const String tTextNullSportType = 'No sport type';
+const String tTextNullDateStarting = 'Unknown day';
+const String tTextNullTimeStarting = 'Unknown time';
+
+// Error Messages
+const String tTextErrorNoEvents = 'No events found';
+const String tTextErrorFetchingEvents = 'Error fetching events';
+
+// String
+const String tTextLeague = 'LEGA';
