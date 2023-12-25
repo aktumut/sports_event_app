@@ -18,6 +18,9 @@ const double tHeightAppBar = 44;
 const double tHeightAppBarLogo = 24;
 const double tWidthAppBarLogo = 44;
 
+// Horizontal Menu
+const double tHeightHorizontalMenu = 28;
+
 // Font Sizes
 const double tFontSizeSmall = 10;
 const double tFontSizeMedium = 14;
