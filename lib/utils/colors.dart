@@ -12,6 +12,8 @@ const Color tColorDarkBlue = Color(0xFF171E31);
 
 const Color tColorGrey = Color(0xFFA7A7A7);
 
+const Color tColorBackgroundGrey = Color(0xFFF3F3F3);
+
 const Color tColorFontGrey = Color(0xFF7B7B7B);
 
 const Color tColorFontTitleDarkGrey = Color(0xFF565F69);
