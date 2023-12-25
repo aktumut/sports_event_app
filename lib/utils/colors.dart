@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 
 const Color tColorWhite = Color(0xFFFFFFFF);
 
+const Color tColorDivider = Color(0xFFF0F0F0);
+
 const Color tColorBlue = Color(0xFF26AEFB);
 
 const Color tColorLightBlue = Color(0xFFE7F4F8);
