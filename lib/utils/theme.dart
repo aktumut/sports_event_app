@@ -7,6 +7,7 @@ class SportsEventAppTheme {
   /// themeData of the app.
   static ThemeData themeData = ThemeData(
     primaryColor: tColorLightBlue,
+    dividerColor: tColorDivider,
     colorScheme: const ColorScheme.light(
       error: tColorRed,
       onBackground: tColorLightBlue,
