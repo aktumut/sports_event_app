@@ -20,7 +20,7 @@ class SportsEventProvider {
           )
           .toList();
     } catch (e) {
-      debugPrint('Error loading sports events: $e');
+      debugPrint('$tTextErrorFetchingEvents $e');
       return [
         SportsEventModel(
           iconUrl: AppImages.iconGameNull,
@@ -29,6 +29,7 @@ class SportsEventProvider {
           sportType: tTextNullSportType,
           dateStarting: tTextNullDateStarting,
           timeStarting: tTextNullTimeStarting,
+          description: tTextNullDescription,
         ),
       ];
     }

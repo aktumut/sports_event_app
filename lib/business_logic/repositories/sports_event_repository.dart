@@ -23,6 +23,7 @@ class SportsEventRepository {
           sportType: tTextNullSportType,
           dateStarting: tTextNullDateStarting,
           timeStarting: tTextNullTimeStarting,
+          description: tTextNullDescription,
         ),
       ];
     }

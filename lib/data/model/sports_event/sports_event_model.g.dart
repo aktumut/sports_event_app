@@ -14,6 +14,7 @@ SportsEventModel _$SportsEventModelFromJson(Map<String, dynamic> json) =>
       sportType: json['sportType'] as String? ?? 'No sport type',
       dateStarting: json['dateStarting'] as String? ?? 'Unknown day',
       timeStarting: json['timeStarting'] as String? ?? 'Unknown time',
+      description: json['description'] as String? ?? 'No description',
     );
 
 Map<String, dynamic> _$SportsEventModelToJson(SportsEventModel instance) =>
@@ -24,4 +25,5 @@ Map<String, dynamic> _$SportsEventModelToJson(SportsEventModel instance) =>
       'sportType': instance.sportType,
       'dateStarting': instance.dateStarting,
       'timeStarting': instance.timeStarting,
+      'description': instance.description,
     };

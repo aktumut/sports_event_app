@@ -16,6 +16,7 @@ class SportsEventModel extends BaseModel {
     this.sportType,
     this.dateStarting,
     this.timeStarting,
+    this.description,
   });
 
   /// Factory constructor for creating a new [SportsEventModel] from JSON
@@ -45,6 +46,10 @@ class SportsEventModel extends BaseModel {
   /// Time when the event starts.
   @JsonKey(defaultValue: tTextNullTimeStarting)
   String? timeStarting;
+
+  /// Description of the event.
+  @JsonKey(defaultValue: tTextNullDescription)
+  String? description;
 
   @override
 
