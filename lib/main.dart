@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:sports_event_app/app.dart';
+import 'package:sports_event_app/core/service_locator.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,6 +14,9 @@ void main() async {
       statusBarColor: Colors.transparent,
     ),
   );
+
+  /// Initializes the service locator.
+  setupLocator();
 
   final app = initializeApp();
 
