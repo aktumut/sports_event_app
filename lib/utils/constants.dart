@@ -25,8 +25,14 @@ const double tHeightHorizontalMenu = 28;
 const double tHeightEventCard = 96;
 const double tHeightEventCardImage = 48;
 const double tWidthEventCardImage = 48;
-const double tRadiusAvatarEventCard = 24;
+const double tRadiusAvatarEventCard = 28;
 const double tWidthFilledEventCard = 196;
+
+// Event Detail Page
+const double tHeightEventDetailPageHeader = 176;
+const double tHeightEventDetailPageBottomBlank = 128;
+const double tHeightIconArrow = 14;
+const double tWidthIconArrow = 2;
 
 // Font Sizes
 const double tFontSizeSmall = 10;
@@ -46,10 +52,12 @@ const String tTextNullTeams = 'No recognized teams';
 const String tTextNullSportType = 'No sport type';
 const String tTextNullDateStarting = 'Unknown day';
 const String tTextNullTimeStarting = 'Unknown time';
+const String tTextNullDescription = 'No description';
 
 // Error Messages
 const String tTextErrorNoEvents = 'No events found';
-const String tTextErrorFetchingEvents = 'Error fetching events';
+const String tTextErrorFetchingEvents = 'Error fetching events:';
 
 // String
 const String tTextLeague = 'LEGA';
+const String tTextGoBack = 'Go Back';
