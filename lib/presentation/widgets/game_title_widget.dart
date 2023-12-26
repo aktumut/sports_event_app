@@ -9,16 +9,21 @@ class GameTitleWidget extends StatelessWidget {
   /// Constructs a [GameTitleWidget].
   const GameTitleWidget({
     required this.event,
+    this.isDetailPage = false,
     super.key,
   });
 
   ///  [SportsEventModel] that contains the information of the event.
   final SportsEventModel event;
 
+  /// A boolean that indicates whether the widget is used in the detail page.
+  final bool isDetailPage;
+
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment:
+          isDetailPage ? CrossAxisAlignment.center : CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
@@ -26,11 +31,11 @@ class GameTitleWidget extends StatelessWidget {
           style: Theme.of(context).textTheme.headlineSmall,
         ),
         SizedBox(
-          width: context.screenWidth - tWidthFilledEventCard,
+          width:
+              isDetailPage ? null : context.screenWidth - tWidthFilledEventCard,
           child: TextScroll(
             '${event.teams}',
             style: Theme.of(context).textTheme.headlineLarge,
-            // mode: TextScrollMode.bouncing,
           ),
         ),
       ],
