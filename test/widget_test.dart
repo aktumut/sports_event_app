@@ -1,30 +1,47 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:sports_event_app/app.dart';
-import 'package:sports_event_app/main.dart';
+import 'package:mocktail/mocktail.dart';
+import 'package:sports_event_app/business_logic/bloc/date_filter/date_filter_cubit.dart';
+import 'package:sports_event_app/business_logic/bloc/sports_event/sports_event_cubit.dart';
+import 'package:sports_event_app/presentation/pages/events_page.dart';
+
+import 'mock_cubit.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const SportsEventApp());
+  group('EventsPage Tests', () {
+    late MockSportsEventCubit mockSportsEventCubit;
+    late MockDateFilterCubit mockDateFilterCubit;
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    setUp(() {
+      mockSportsEventCubit = MockSportsEventCubit();
+      mockDateFilterCubit = MockDateFilterCubit();
+      when(mockSportsEventCubit.fetchEvents).thenAnswer((_) async {});
+      when(() => mockSportsEventCubit.state).thenReturn(SportsEventLoading());
+      when(() => mockDateFilterCubit.state).thenReturn(DateFilterInitial());
+    });
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    testWidgets('shows loading indicator when state is SportsEventLoading',
+        (WidgetTester tester) async {
+      await tester.pumpWidget(
+        MaterialApp(
+          home: MultiBlocProvider(
+            providers: [
+              BlocProvider<SportsEventCubit>(
+                create: (context) => mockSportsEventCubit,
+              ),
+              BlocProvider<DateFilterCubit>(
+                create: (BuildContext context) => mockDateFilterCubit,
+              ),
+            ],
+            child: const EventsPage(),
+          ),
+        ),
+      );
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+      await tester.pump();
+
+      expect(find.byType(CircularProgressIndicator), findsOneWidget);
+    });
   });
 }
