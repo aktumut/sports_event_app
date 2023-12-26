@@ -23,7 +23,6 @@ class HorizontalMenu extends StatelessWidget {
           width: double.infinity,
           color: tColorBackgroundGrey,
           child: Row(
-            // mainAxisAlignment: MainAxisAlignment.spaceAround,
             mainAxisAlignment: MainAxisAlignment.center,
             children: DateFilter.values.map((dateFilter) {
               final isSelected = dateFilter == selectedFilter;
@@ -31,7 +30,9 @@ class HorizontalMenu extends StatelessWidget {
                 context: context,
                 dateFilter: dateFilter,
                 isSelected: isSelected,
-                onTap: () => dateFilterCubit.selectDateFilter(dateFilter),
+                onTap: () {
+                  dateFilterCubit.selectDateFilter(dateFilter);
+                },
               );
             }).toList(),
           ),
