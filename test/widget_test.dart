@@ -4,7 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:sports_event_app/business_logic/bloc/date_filter/date_filter_cubit.dart';
 import 'package:sports_event_app/business_logic/bloc/sports_event/sports_event_cubit.dart';
-import 'package:sports_event_app/presentation/pages/events_page.dart';
+import 'package:sports_event_app/presentation/pages/events_page/events_page.dart';
 
 import 'mock_cubit.dart';
 
@@ -28,7 +28,7 @@ void main() {
           home: MultiBlocProvider(
             providers: [
               BlocProvider<SportsEventCubit>(
-                create: (context) => mockSportsEventCubit,
+                create: (BuildContext context) => mockSportsEventCubit,
               ),
               BlocProvider<DateFilterCubit>(
                 create: (BuildContext context) => mockDateFilterCubit,
