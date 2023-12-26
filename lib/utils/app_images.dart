@@ -6,7 +6,7 @@ class AppImages {
   /// [iconGameNull] is a variable that contains the path of the icon game
   static const String iconGameNull = 'assets/svg/icon_game_null.svg';
 
-  /// [iconBasketball] is a variable that contains the path of the icon basketball
+  /// [iconBasketball] is a variable that contains the path of the basketball
   static const String iconBasketball = 'assets/svg/icon_basketball.svg';
 
   /// [iconFootball] is a variable that contains the path of the icon football
@@ -15,6 +15,9 @@ class AppImages {
   /// [iconTennis] is a variable that contains the path of the icon tennis
   static const String iconTennis = 'assets/svg/icon_tennis.svg';
 
-  /// [iconVolleyball] is a variable that contains the path of the icon volleyball
+  /// [iconVolleyball] is a variable that contains the path of the  volleyball
   static const String iconVolleyball = 'assets/svg/icon_volleyball.svg';
+
+  /// [iconArrow] is a variable that contains the path of the icon arrow
+  static const String iconArrow = 'assets/svg/icon_arrow.svg';
 }
